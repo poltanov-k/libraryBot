@@ -10,16 +10,6 @@ def start_message(message):
 def get_text_messages(message):
     if message.text.lower() == "привет":
         bot.send_message(message.from_user.id, "Привет! Пора чему-нибудь научиться! /start")
-    elif message.text == "/help":
-        bot.send_message(message.from_user.id, "Нажми /start, выбери раздел, качай гайд и развивайся!")
-    elif message.text.lower() == "я максим":
-        bot.send_sticker(message.from_user.id, 'CAADAgADHgQAAhmGAwABE6BUwzsaT04WBA')
-    elif message.text.lower() == "я кирилл":
-        bot.send_sticker(message.from_user.id, 'CAADAgADNAADZTyjDW1Kagy7OK-ZFgQ')
-    elif message.text.lower() == "я сергей":
-        bot.send_sticker(message.from_user.id, 'CAADAgAEAQACJEfbArDFK9BIhjzrFgQ')
-    elif message.text.lower() == "я костя":
-        bot.send_sticker(message.from_user.id, 'CAADAgADLgADZTyjDRv28XQnMMSlFgQ')
 
     # МЕНЮ ГАЙДОВ
 
@@ -38,7 +28,7 @@ def get_text_messages(message):
                 bot.send_message(message.from_user.id, "Доступные гайды:\n\n<b>Как мотивировать себя на тренировки и достигать целей</b>\nСкачать - /download11 \n\n", parse_mode="HTML",reply_markup=keyboard9)
     elif message.text == "Общение":
                 bot.send_message(message.from_user.id, "Доступные гайды:\n\n<b>Секреты общения. Магия слов</b>\nСкачать - /download12 \n\n", parse_mode="HTML",reply_markup=keyboard9)
-    elif message.text == "Серега! Нужно больше гайдов!":
+    elif message.text == "Нужно больше гайдов!":
                 bot.send_sticker(message.from_user.id, 'CAADAgADLQADW46KBtt3vZkY7m8NFgQ')
 
     elif message.text == "Программирование 💻":
@@ -229,7 +219,7 @@ keyboard2.add("В главное меню ☝")
 keyboard3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 keyboard3.add('Мотивация')
 keyboard3.add("Общение")
-keyboard3.add("Серега, заебал. Нужно больше гайдов!")
+keyboard3.add("Нужно больше гайдов!")
 keyboard3.add("В главное меню ☝")
 
 keyboard4 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
@@ -261,7 +251,7 @@ keyboard7.add("Испанский язык")
 keyboard7.add("Французский язык")
 keyboard7.add("В главное меню ☝")
 
-# КЛАВА НАЗАД (ДА, Я ДОЛБАЕБ, МОГУ ТОЛЬКО ТАК)
+# КЛАВА НАЗАД
 
 keyboard8 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 keyboard8.add('Назад ↩')
